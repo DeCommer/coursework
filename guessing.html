@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/guessing.css" />
+    <script src="./js/guessing.js" defer></script>
+    <title>Guess the Secret Number</title>
+</head>
+<body>
+    <main>
+    <header>
+        <h1>Guess the secret Number</h1>
+        <div class="number">?</div>
+        <p class="between">(Between 1 and 20)</p>
+    </header>
+        <section class="top">
+            <button class="btn resetbtn">Reset</button>
+            <input type="number"  class="guess" />
+            <button class="btn guessBtn">Guess!</button>
+        </section>
+        <section class="bottom">
+            <p class="message">🤨 Enter your guess! 😏</p>
+            <p class="label-score">Score: <span class="score">20</span></p>
+            <p class="label-highscore">Highscore: <span class="Highscore">0</span></p>
+        </section>
+    </main>
+</body>
+</html>

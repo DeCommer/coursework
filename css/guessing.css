@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'helvetica neue', helvetica, arial, sans-serif;
+    color: #F0EDCF;
+    background-color: #334e6a;
+}
+
+/* LAYOUT */
+
+main {
+  margin-top: 25%;
+}
+
+.top {
+  display: flex; 
+  margin: 25px auto;
+  width: 52rem;
+}
+
+.bottom {
+  margin: 0 auto;
+  text-align: center;
+  width: 52rem;
+  font-size: 2rem;
+}
+
+/* ELEMENTS STYLE */
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.number {
+  background: #F0EDCF;
+  color: #334e6a;
+  border-radius: 15px;
+  font-size: 6rem;
+  width: 15rem;
+  padding: 3rem 0rem;
+  text-align: center;
+  position: relative;
+  margin: 50px auto 25px auto;
+}
+
+.between {
+  text-align: center;
+  font-size: 1.4rem;
+  width: 150px;
+  margin: 0 auto;
+}
+
+.reset {
+  display: flex;  
+}
+
+input::-webkit-inner-spin-button {
+  display: none;
+}
+
+.guess {
+  background: #fff;
+  margin: 0 25px;
+  border: 1px solid #F0EDCF;
+  border-radius: 5px;
+  font-family: inherit;
+  color: #232323;
+  font-size: 2rem;
+  padding: 2rem;
+  width: 20rem;
+  text-align: center;
+}
+
+.btn {
+  border: none;
+  background-color: #F0EDCF;
+  border-radius: 15px;
+  color: #222;
+  font-size: 2rem;
+  font-family: inherit;
+  padding: 2rem 3rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #D5B4B4;
+}
+
+.btn:active {
+  transform: translateY(2px);
+}
+
+.message {
+  font-size: 1.5em;
+  margin-bottom: 2rem;
+  height: 3rem;
+}
+
+.label-score {
+  margin-bottom: 2rem;
+}

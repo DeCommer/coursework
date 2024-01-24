@@ -51,42 +51,100 @@
 
 // ********* Functions with Objects ********************
 
-const mark = {
-    firstName : "Mark",
-    lastName : "Miller",
-    mass : 78,
-    height : 1.69,
-    calcBMI : function() { this.bmi = Math.floor(this.mass / this.height ** 2)
-        return this.bmi}
-};
+// const mark = {
+//     firstName : "Mark",
+//     lastName : "Miller",
+//     mass : 78,
+//     height : 1.69,
+//     calcBMI : function() { this.bmi = Math.floor(this.mass / this.height ** 2)
+//         return this.bmi}
+// };
 
-const john = {
-    firstName : "John",
-    lastName : "Smith",
-    mass : 92,
-    height : 1.95,
-    calcBMI : function() { this.bmi = Math.floor(this.mass / this.height ** 2) 
-    return this.bmi}
-};
+// const john = {
+//     firstName : "John",
+//     lastName : "Smith",
+//     mass : 92,
+//     height : 1.95,
+//     calcBMI : function() { this.bmi = Math.floor(this.mass / this.height ** 2) 
+//     return this.bmi}
+// };
 
-john.calcBMI(), mark.calcBMI();
+// john.calcBMI(), mark.calcBMI();
 
-if (john.bmi > mark.bmi) {
-    console.log(`${john.firstName}'s BMI (${john.bmi}) is higher than ${mark.firstName}'s (${mark.bmi})`)
-}else if(mark.bmi > john.bmi){
-    console.log(`${mark.firstName} 's BMI (${mark.bmi}) is higher than ${john.firstName}'s (${john.bmi})`)
+// if (john.bmi > mark.bmi) {
+//     console.log(`${john.firstName}'s BMI (${john.bmi}) is higher than ${mark.firstName}'s (${mark.bmi})`)
+// }else if(mark.bmi > john.bmi){
+//     console.log(`${mark.firstName} 's BMI (${mark.bmi}) is higher than ${john.firstName}'s (${john.bmi})`)
+// }
+
+// const joseph = {
+//     firstName : "Joseph",
+//     lastName : "DeCommer",
+//     age: 2024 - 1979,
+//     job : "trader",
+//     friends : ["Constance", "Spoons", "Self"]
+// };
+
+// const josephArr = [
+//     "Joseph",
+//     "DeCommer",
+//     2024 - 1979,
+//     "trader",
+//     ["Constance", "Spoons", "Self"]
+// ];
+
+// const chalSent  = `${joseph.firstName} is ${joseph.age} has ${joseph.friends.length} friends, and his best friend is ${joseph.friends[0]}`
+
+// console.log(chalSent)
+
+// const type = []
+
+// for (let i = 0; i < josephArr.length; i++) {
+//     // reading array
+//     console.log(josephArr[i])
+//     // writing to array
+//     //type[i] = typeof josephArr[i]
+//     type.push(typeof josephArr[i])
+// }
+// console.log(type)
+
+// ********* Loops ********************
+
+// const josephArr = [
+//     "Joseph",
+//     "DeCommer",
+//     2024 - 1979,
+//     "trader",
+//     ["Constance", "Spoons", "Self"]
+// ];
+
+// for(let i = 0; i < 10; i++) {
+//     console.log("Chapter")
+//     for(let j = 0; j < 10; j++) {
+//         console.log("Paragraph")
+//     }
+// }
+
+const temps1 = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5]
+const temps2 = [2, 4, 7, -6, -3, 18, -4, 21];
+
+
+const tempAmplitude = function(temps1, temps2) {
+    const temps = temps1.concat(temps2);
+    let max = temps[0];
+    let min = temps[0];
+
+    for (let i = 0; i < temps.length; i++) {
+        const curTemp = temps[i]
+        if (typeof curTemp !== 'number') continue;
+
+        if(curTemp > max) max = curTemp;
+        if(curTemp < min) min = curTemp;
+    }   
+    console.log(max, min);
+    return max - min;
 }
 
+const amplitude = tempAmplitude(temps1, temps2);
 
-
-const joseph = {
-    firstName : "Joseph",
-    lastName : "DeCommer",
-    age: 2024 - 1979,
-    job : "trader",
-    friends : ["Constance", "Spoons", "Self"]
-};
-
-const chalSent  = `${joseph.firstName} is ${joseph.age} has ${joseph.friends.length} friends, and his best friend is ${joseph.friends[0]}`
-
-console.log(chalSent)
+console.log(amplitude);

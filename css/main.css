@@ -12,8 +12,9 @@ body {
 
 header{
     text-align: center;
-    width: 25%;
+    width: 35%;
     margin: 0 auto;
+    padding: 15px;
     color: #fff;
     margin-top: 35%;
     border: 1px solid #fff;

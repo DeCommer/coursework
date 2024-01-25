@@ -12,7 +12,7 @@
     <header>
         <h1>Guess the secret Number</h1>
         <div class="number">?</div>
-        <p class="between">(Between 1 and 20)</p>
+        <p class="between">( Between 1 and 100 )</p>
     </header>
         <section class="top">
             <button class="btn resetbtn">Reset</button>
@@ -20,10 +20,31 @@
             <button class="btn guessBtn">Guess!</button>
         </section>
         <section class="bottom">
+            <p class="prevGuess"></p>
             <p class="message">🤨 Enter your guess! 😏</p>
-            <p class="label-score">Score: <span class="score">20</span></p>
-            <p class="label-highscore">Highscore: <span class="Highscore">0</span></p>
+            <p class="label-score">Guesses Remaining: <span class="score">20</span></p>
+            <p class="label-highscore">Highscore: <span class="highscore">0</span></p>
         </section>
+        <nav>
+            <div class="left-links">
+                <a href="./index.html">Back</a>
+                <a class="aboutBtn" href="#">About</a>
+             </div>
+             <div class="right-links">
+                <a href="https://www.decommer.com">DeCommer.com</a>
+             </div>
+        </nav>
+
+        <div class="modal hidden">
+            <button class="close-modal">&times</button>
+            <h1>About this game</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                 Asperiores commodi placeat, eum, porro tempora nostrum ut dolorum suscipit 
+                 itaque reiciendis sint ducimus. Ipsam molestias dolore velit repellendus 
+                 eligendi totam iste.
+            </p>
+        </div>
+        <div class="overlay hidden"></div>
     </main>
 </body>
 </html>

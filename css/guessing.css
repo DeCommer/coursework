@@ -17,13 +17,13 @@ body {
 /* LAYOUT */
 
 main {
-  margin-top: 25%;
+  margin-top: 15%;
 }
 
 .top {
   display: flex; 
   margin: 25px auto;
-  width: 52rem;
+  width: 55rem;
 }
 
 .bottom {
@@ -69,14 +69,14 @@ input::-webkit-inner-spin-button {
 
 .guess {
   background: #fff;
-  margin: 0 25px;
+  margin: 0 auto;
   border: 1px solid #F0EDCF;
   border-radius: 5px;
   font-family: inherit;
   color: #232323;
   font-size: 2rem;
-  padding: 2rem;
-  width: 20rem;
+  padding: 1rem;
+  width: 25rem;
   text-align: center;
 }
 

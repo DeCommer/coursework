@@ -81,9 +81,6 @@ document.querySelector('.close-modal').addEventListener('click', closeModal);
 document.querySelector('.overlay').addEventListener('click', closeModal);
 
 
-
-
-
 //Previous states
     // else if (guess > secretNumber) {
     //     if(score > 1) {

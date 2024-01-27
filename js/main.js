@@ -148,3 +148,34 @@
 // const amplitude = tempAmplitude(temps1, temps2);
 
 // console.log(amplitude);
+
+// let arr1 = [1,2,3];
+// let arr2 = [4,5,6];
+
+// const arr3 = [... arr1, ... arr2];
+// console.log(arr3);
+
+// ****************** Iterables: arrays, strings, maps, sets, but not Objects
+
+// const str1 = "Joseph"
+
+// const letters = [...str1];
+// console.log(letters);
+// console.log(...str1); 
+
+// const days = ["Monday", "Tuesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+// for(const day of days) {
+//     console.log(day);
+// }
+
+// const midSeat = function(seat) {
+//     const s = seat.slice(-1);
+//     s === 'B' || s === 'E' ? console.log("You got a middle seat") : 
+//     console.log("You got a window or isle seat");
+// };
+
+// midSeat("13B");
+// midSeat("23C");
+// midSeat("3E");
+

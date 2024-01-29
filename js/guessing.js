@@ -5,7 +5,7 @@ let guesses = 20;
 let highscore = 0;
 
 const modal = document.querySelector('.modal');
-const overlay = document.querySelector('.overlay')
+const overlay = document.querySelector('.overlay');
 
 const messageDisp = function(message) {
     document.querySelector('.message').textContent = message;

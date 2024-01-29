@@ -1,47 +1,64 @@
-const select = document.querySelectorAll('.currency');
-const number = document.getElementById('number');
-const output = document.getElementById('output');
-const result = document.getElementById('result');
+const exchangeRates = {usd: 1};
+const fromCurrency = document.querySelector('.converter-container #from');
+const toCurrency = document.querySelector('.converter-container #to');
+const inputAmount = document.querySelector('.converter-container .input-amount');
+const result = document.querySelector('.converter-container .result');
+const swapBtn = document.querySelector('.converter-container .swap-btn');
 
+const floatratesUrl = 'http://floatrates.com/daily/usd.json'
+const init = async () => {
+    try {
+        const res = await fetch(floatratesUrl);
+        const data = await res.json();
 
-fetch('https://api.frankfurter.app/currencies').then((data) => data.json())
-    .then((data) => {
-        display(data);
-    });
+        if(res.ok) {
+            for (const currencyCode in data) {
+                const currencyInfo = data[currencyCode];
+                const { code, name} = currencyInfo;
+                
+                exchangeRates[currencyCode] = currencyInfo.rate;
 
-function display(data) {
-    const entries = Object.entries(data);
+                const option1 = document.createElement('option');
+                option1.value = code;
+                option1.textContent = `${code} - ${name}`;
 
-    console.log(entries);
+                const option2 = option1.cloneNode(true);
 
-    for (let i = 0; i < entries.length; i++) {
-        select[0].innerHTML += `<option value = "${entries[i][0]}"> ${entries[i][0]} : ${entries[i][1]} </option>`;
-        select[1].innerHTML += `<option value = "${entries[i][0]}"> ${entries[i][0]} : ${entries[i][1]} </option>`;
+                fromCurrency.appendChild(option1);
+                toCurrency.appendChild(option2);
+            }
+            //console.log(exchangeRates);
+            toCurrency.value = toCurrency.options[1].value;
+            convert();
+        }
+    }catch (error){
+        console.log("Error loading currencies")
     }
-}
+};
 
-function updateval() {
-    let curr1 = select[0].value;
-    let curr2 = select[1].value;
-    let val = number.value;
+init();
 
-    if (curr1 != curr2) {
-        convert(curr1, curr2, val);
-    }else {
-        //result.textContent = `${val} ${curr1} is ${val} ${curr2}`;
-        output.value = 1;
-    }
+const convert = () => {
+    const inputValue = parseFloat(inputAmount.value);
+    const fromCurrencyValue = fromCurrency.value.toLowerCase();
+    const toCurrencyValue = toCurrency.value.toLowerCase();
 
-    function convert(currency1, currency2, value) {
-        const host = "api.frankfurter.app";
-        fetch(`https://${host}/latest?amount=${value}&from=${currency1}&to=${currency2}`)
-          .then((val) => val.json())
-          .then((val) => {
-            let resultNum = Object.values(val.rates)[0]
-            console.log(resultNum);
-            output.value = resultNum;
-            result.textContent = `${value} ${currency1} is ${resultNum} ${currency2}.`; //Shows results above form
-          });
-  
-    }
-}
+    const convertedValue = (inputValue * exchangeRates[toCurrencyValue]) / exchangeRates[fromCurrencyValue];
+    const resultValue = `<span class='result-currency'>${toCurrencyValue}</span> ${convertedValue.toFixed(2)}`;
+    
+    result.innerHTML = isNaN(convertedValue) ? "Enter amount above" : resultValue;
+};
+
+toCurrency.addEventListener('change', convert);
+fromCurrency.addEventListener('change', convert);
+inputAmount.addEventListener('input', convert);
+swapBtn.addEventListener('click', () => {
+    const fromCurrencyValue = fromCurrency.value;
+    const toCurrencyValue = toCurrency.value;
+
+    fromCurrency.value = toCurrencyValue;
+    toCurrency.value = fromCurrencyValue;
+
+    convert();
+
+});

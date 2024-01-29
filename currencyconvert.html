@@ -8,17 +8,30 @@
     <title>Currency Converter</title>
 </head>
 <body>
-    <header>
-        <h1>Currency Converter</h1>
-    </header>
-    <section>
-        <input type="text" class="form-input" id="number" value="1">
-        <select name="currency" class="currency" onchange="updateval()"></select>
-    </section>
-    <section>
-        <input type="text" class="form-input" id="output" placeholder="0" disabled>
-        <select name="currency" class="currency" onchange="updateval()"></select>
-        <p id="result"></p>
-    </section>
+    <main>
+        <a class="links" href="index.html">Home</a>
+        <div class="converter-container">
+            
+            <h2>Currency Converter <span>💵 💶 💷 💴</span></h2>
+            <div class="content">
+                <input class="input-amount" type="number" value="1.00" placeholder="Enter amount">
+                <div class="select-container custom-select">
+                    <Section>
+                        <select name="" id="from">
+                            <option value="usd">USD - U.S. Dollar</option>
+                        </select>
+                        <select name="" id="to">
+                            <option value="usd">USD - U.S. Dollar</option>
+                        </select>
+                    </Section>
+                        <div class="swap-btn">
+                            <p>⇢<br>Swap currency<br>⇠</p>
+                        </div>
+                </div>
+                <div class="result"><span class="result-currency">USD </span>00</div>
+            </div>
+        </div>
+        
+    </main>
 </body>
 </html>

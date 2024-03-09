@@ -8,7 +8,7 @@
 .container {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(135deg, #ffffff, #9dbcd4);
+    background: #007ACC;
     color: #333;
     padding: 10px;
     display: flex;
@@ -18,7 +18,7 @@
 
 .calculator {
     border: 1px solid #b8b7b7;
-    background: linear-gradient(135deg, #ffffff97, #ffffff09);
+    background: rgba(255, 255, 255, 0.2);
     box-shadow: 5px 5px 25px #00000048;
     border-radius: 15px;
     max-width: fit-content;

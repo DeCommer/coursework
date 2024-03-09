@@ -40,24 +40,24 @@
 
 //For Each -
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300]
+const dipositsWithdraws = [200, 450, -400, 3000, -650, -130, 70, 1300]
 let total = 0;
 
-for (const [i, movement] of movements.entries()) {
-    if(movement > 0) {
-        console.log(`${i + 1}: You made a deposit of: $${movement}.`);
+for (const [i, dipositwithdraw] of dipositsWithdraws.entries()) {
+    if(dipositwithdraw > 0) {
+        console.log(`${i + 1}: You made a deposit of: $${dipositwithdraw}.`);
     }else {
-        console.log(`${i + 1}: You made a witdrawl of: $${Math.abs(movement)}.`);
+        console.log(`${i + 1}: You made a witdrawl of: $${Math.abs(dipositwithdraw)}.`);
     }
 }
 console.log('-----------ForEach------------')
-movements.forEach(function(movement, i, arr) {
-    if(movement > 0) {
-        console.log(`${i + 1}: You made a deposit of: $${movement}.`);
-        total += movement;
+dipositsWithdraws.forEach(function(dipositwithdraw, i, arr) {
+    if(dipositwithdraw > 0) {
+        console.log(`${i + 1}: You made a deposit of: $${dipositwithdraw}.`);
+        total += dipositwithdraw;
     }else {
-        console.log(`${i + 1}: You made a witdrawl of: $${Math.abs(movement)}.`);
-        total += movement;
+        console.log(`${i + 1}: You made a witdrawl of: $${Math.abs(dipositwithdraw)}.`);
+        total += dipositwithdraw;
     }
 });
 console.log(`Total Balance: $${total}`);

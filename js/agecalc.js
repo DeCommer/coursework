@@ -1,21 +1,15 @@
 
-
 let userInput = document.getElementById('date');
 let futureDate = new Date().toISOString().split('T')[0];
 let result = document.getElementById('result');
 
 let additional = document.getElementById('additional');
 
-
-
 function calculateAge() {
     let bd = new Date(userInput.value);
     let bdHours = bd.getHours(userInput.value);
     let bdMinutes = bd.getMinutes(userInput.value);
     let bdSeconds = bd.getSeconds(userInput.value);
-
-    
-
     let d1 = bd.getDate();
     let m1 = bd.getMonth() + 1;
     let y1 = bd.getFullYear();

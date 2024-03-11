@@ -71,6 +71,6 @@ const removeDupes = (arr) => {
     return uArr;
 }
 document.getElementById('no-duplicates').textContent = `Original: 2,2,3,5,4,4,7 Duplicates removed: ${removeDupes([2,2,3,5,4,4,7])}`
-console.log(removeDupes([2,2,3,5,4,4,7]))
+
 
 

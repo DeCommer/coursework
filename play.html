@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./js/play.js" defer></script>
+    <link rel="stylesheet" href="./css/play.css">
     <title>Playground</title>
 </head>
 <body>
@@ -14,6 +15,21 @@
     <p id="palindrome"></p>
     <p id="not-palindrome"></p>
     <p id="no-duplicates"></p>
-    <p id="fizz-Buzz"></p>
+    
+    <div class="dice-game-section">
+        <div class="dice-numbers">
+        <p id="dice-1-result">0</p>
+        <p id="dice-2-result">0</p>
+        </div>
+        <p id="result-text">7 or 11 win!</p>
+        <button id="roll-btn" class="btn">Roll</button>
+    </div>
+    <section>
+        <h2>Format phone number</h2>
+        <input id="ph-usr-in" placeholder="enter 10 digit number">
+        <button id="ph-enter-btn">Enter</button>
+        <p id="ph-num-result">(---) --- ----</p>
+    </section>
+    <p id="card-hand"></p>
 </body>
 </html>
